@@ -8,11 +8,19 @@ public class Notifications {
     String companyName;
     String contactPerson;
     String dateTime;
+    String summery;
+    String pastProjects;
+    String presentProjects;
+    String featureProjects;
 
     public Notifications() {
         companyName = "";
         contactPerson = "";
         dateTime = "";
+        summery = "";
+        pastProjects = "";
+        featureProjects = "";
+        presentProjects = "";
     }
 
     public String getCompanyName() {
@@ -37,5 +45,37 @@ public class Notifications {
 
     public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public String getSummery() {
+        return summery;
+    }
+
+    public void setSummery(String summery) {
+        this.summery = summery;
+    }
+
+    public String getPastProjects() {
+        return pastProjects;
+    }
+
+    public void setPastProjects(String pastProjects) {
+        this.pastProjects = pastProjects;
+    }
+
+    public String getPresentProjects() {
+        return presentProjects;
+    }
+
+    public void setPresentProjects(String presentProjects) {
+        this.presentProjects = presentProjects;
+    }
+
+    public String getFeatureProjects() {
+        return featureProjects;
+    }
+
+    public void setFeatureProjects(String featureProjects) {
+        this.featureProjects = featureProjects;
     }
 }

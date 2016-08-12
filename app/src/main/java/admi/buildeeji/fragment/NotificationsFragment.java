@@ -62,6 +62,10 @@ public class NotificationsFragment extends Fragment {
             notifications.setCompanyName(companyName[i]);
             notifications.setContactPerson(BasicBuildExpoFragment.contactPerson[i]);
             notifications.setDateTime(dateTime[i]);
+            notifications.setSummery(BasicBuildExpoFragment.summery[i]);
+            notifications.setPastProjects(BasicBuildExpoFragment.featureProjects[i]);
+            notifications.setFeatureProjects(BasicBuildExpoFragment.summery[i]);
+            notifications.setPresentProjects(BasicBuildExpoFragment.featureProjects[i]);
             notificationsArrayList.add(notifications);
         }
     }
