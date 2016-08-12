@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/build_expo_basic_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="@drawable/equipment_radio_button_background"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="@dimen/common_layout_padding"
+                android:text="Basic"
+                android:textColor="@drawable/radiobutton_text"
+                android:textSize="@dimen/sub_header_text_size" />
+
+            <RadioButton
+                android:id="@+id/build_expo_normal_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0.33"
+                android:background="@drawable/equipment_radio_button_background"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center"
+                android:padding="@dimen/common_layout_padding"
+                android:text="Normal"
+                android:textColor="@drawable/radiobutton_text"
+                android:textSize="@dimen/sub_header_text_size" />
+
+            <RadioButton
+                android:id="@+id/build_expo_premium_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0.34"
+                android:background="@drawable/equipment_radio_button_background"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="@dimen/common_layout_padding"
+                android:text="Premium"
+                android:textColor="@drawable/radiobutton_text"
+                android:textSize="@dimen/sub_header_text_size" />
+
+            <RadioButton
+                android:id="@+id/build_expo_gold_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0.34"
+                android:background="@drawable/equipment_radio_button_background"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="@dimen/common_layout_padding"
+                android:text="Gold"
+                android:textColor="@drawable/radiobutton_text"
+                android:textSize="@dimen/sub_header_text_size" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/parent_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/radio_group"
+            android:layout_gravity="start"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+</FrameLayout>

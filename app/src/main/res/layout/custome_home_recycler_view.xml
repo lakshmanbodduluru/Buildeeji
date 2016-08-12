@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/home_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardCornerRadius="2dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/home_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/home_for_sale"/>
+            <TextView
+                android:id="@+id/home_recycle_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="lakshman"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </FrameLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
