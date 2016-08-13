@@ -27,6 +27,8 @@ public class BasicBuildExpoFragment extends BuildeejiFragment {
 
     String[] companyName = {"Basic BuildExpo", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"};
     public static String[] contactPerson = {"Lakshman", "Krishna", "Suresh", "Naresh", "Harsha", "Vishnu", "Vishal", "Sravan Kumar", "Suresh Reddy", "Surya kiran", "Vishan gunne", "Vijay Kumar Reddy", "Trinadh kumar", "Srinivas", "Praveen yadav", "Prame Reddy", "Surendar", "Sukumar", "Sushanth", "Abhishake yadav", "Arjun kumar"};
+    public String[] phone = {};
+    private String[] email = {};
     public static int[] images = {R.drawable.hot_projects, R.drawable.hot_projects, R.drawable.hot_projects,
             R.drawable.hot_projects, R.drawable.hot_projects, R.drawable.hot_projects,
             R.drawable.hot_projects, R.drawable.hot_projects, R.drawable.hot_projects,
@@ -130,7 +132,7 @@ public class BasicBuildExpoFragment extends BuildeejiFragment {
 
     ArrayList<BasicBuildExpo> basicBuildExpoArrayList;
 
-    public static BasicBuildExpoFragment newInstance(){
+    public static BasicBuildExpoFragment newInstance() {
         BasicBuildExpoFragment basicBuildExpoFragment = new BasicBuildExpoFragment();
         return basicBuildExpoFragment;
     }

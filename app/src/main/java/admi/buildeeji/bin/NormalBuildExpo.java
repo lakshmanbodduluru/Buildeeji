@@ -11,6 +11,8 @@ public class NormalBuildExpo {
     String featureProjects;
     String presentProjects;
     String previousProjects;
+    String phoneNumber;
+    String email;
 
     public NormalBuildExpo(){
         companyName = "";
@@ -20,6 +22,7 @@ public class NormalBuildExpo {
         featureProjects = "";
         presentProjects = "";
         previousProjects = "";
+        phoneNumber ="";
     }
 
     public String getCompanyName() {
@@ -76,5 +79,13 @@ public class NormalBuildExpo {
 
     public void setPreviousProjects(String previousProjects) {
         this.previousProjects = previousProjects;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

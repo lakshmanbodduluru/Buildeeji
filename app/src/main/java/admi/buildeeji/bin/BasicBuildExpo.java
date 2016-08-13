@@ -7,7 +7,9 @@ public class BasicBuildExpo {
     String companyName;
     String contactPerson;
     int image;
+    String phoneNumber;
     String summery;
+    String email;
     String featureProjects;
     String presentProjects;
     String previousProjects;
@@ -20,8 +22,7 @@ public class BasicBuildExpo {
         featureProjects = "";
         presentProjects = "";
         previousProjects = "";
-
-
+        phoneNumber = "";
     }
 
     public BasicBuildExpo(String companyName, String contactPerson, int image) {
@@ -84,5 +85,21 @@ public class BasicBuildExpo {
 
     public void setPreviousProjects(String previousProjects) {
         this.previousProjects = previousProjects;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

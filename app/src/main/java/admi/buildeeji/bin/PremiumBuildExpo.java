@@ -6,6 +6,8 @@ package admi.buildeeji.bin;
 public class PremiumBuildExpo {
     String companyName;
     String contactPerson;
+    String phoneNumber;
+    String email;
     int image;
     String summery;
     String featureProjects;
@@ -76,5 +78,21 @@ public class PremiumBuildExpo {
 
     public void setPreviousProjects(String previousProjects) {
         this.previousProjects = previousProjects;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

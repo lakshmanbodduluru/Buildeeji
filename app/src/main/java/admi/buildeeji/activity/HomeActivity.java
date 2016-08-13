@@ -33,7 +33,7 @@ import admi.buildeeji.bin.NavigationDataProvider;
 import admi.buildeeji.fragment.BuildExpoFragment;
 import admi.buildeeji.fragment.HomeFragment;
 import admi.buildeeji.fragment.HotProjectsFragment;
-import admi.buildeeji.fragment.MainMenuSettingsFragment;
+import admi.buildeeji.fragment.SettingsFragment;
 import admi.buildeeji.fragment.NotificationsFragment;
 import admi.buildeeji.listeners.ClickListener;
 
@@ -131,7 +131,7 @@ public class HomeActivity extends BuildeejiActivity
         adapter.addFragment(new BuildExpoFragment(), "");
         adapter.addFragment(new HotProjectsFragment(), "");
         adapter.addFragment(new NotificationsFragment(), "");
-        adapter.addFragment(new MainMenuSettingsFragment(), "");
+        adapter.addFragment(new SettingsFragment(), "");
         homeViewPager.setAdapter(adapter);
 
     }
