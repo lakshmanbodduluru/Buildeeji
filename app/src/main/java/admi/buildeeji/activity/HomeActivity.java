@@ -245,7 +245,8 @@ public class HomeActivity extends BuildeejiActivity
 
     @Override
     public void onClickMail(String toMail) {
-        Intent email = Util.sendEmail("lakshman.bodduluru@gmail.com", null);
+        Bundle bundle = new Bundle();
+        Intent email = Util.sendEmail(toMail, bundle);
         startActivity(email);
     }
 

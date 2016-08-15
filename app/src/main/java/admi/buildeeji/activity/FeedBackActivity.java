@@ -42,13 +42,14 @@ public class FeedBackActivity extends BuildeejiActivity implements View.OnClickL
         reason = (Spinner) findViewById(R.id.feedback_reason_spinner);
         reasonAdapter = ArrayAdapter.createFromResource(this, R.array.contact_us_reason, R.layout.custome_spinner);
         reason.setAdapter(reasonAdapter);
+        tollFreeNumber.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.feedback_toll_free_number:
+            case R.id.toolfree_number_linear:
                 String phone = "9494896482";
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:" + phone));
