@@ -55,7 +55,9 @@
             android:name=".activity.LiveChat"
             android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme.Action" />
-        <activity android:name=".activity.FeedBackActivity"></activity>
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:theme="@style/MyMaterialTheme.Action"></activity>
     </application>
 
 </manifest>

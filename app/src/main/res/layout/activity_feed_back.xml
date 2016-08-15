@@ -9,4 +9,117 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="admi.buildeeji.activity.FeedBackActivity">
 
+    <TextView
+        android:id="@+id/toll_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tool Free"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/toolfree_number_linear"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/toll_text"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_bg_black"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/feedback_toll_free_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="9494896482"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/feedback_timing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolfree_number_linear"
+        android:layout_marginTop="10dp"
+        android:text="Mon-Sat : 9:30am to 6:00pm IST"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/feed_linear2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/feedback_timing"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_round_rect_white"
+        android:padding="2dp">
+
+        <Spinner
+            android:id="@+id/feedback_reason_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/feedback_et"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/feed_linear2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_round_rect_white"
+        android:gravity="start"
+        android:padding="2dp" />
+
+    <EditText
+        android:id="@+id/feedback_email_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/feedback_et"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_round_rect_white"
+        android:gravity="start"
+        android:hint="Email"
+        android:padding="2dp" />
+
+    <EditText
+        android:id="@+id/feedback_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/feedback_email_et"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_round_rect_white"
+        android:gravity="start"
+        android:hint="Name"
+        android:padding="2dp" />
+
+    <EditText
+        android:id="@+id/feedback_mobile_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/feedback_name_et"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_round_rect_white"
+        android:gravity="start"
+        android:hint="Mobile"
+        android:padding="2dp" />
+
+    <Button
+        android:id="@+id/feedback_send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/feedback_mobile_et"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_round_rect_white"
+        android:inputType="textAutoComplete"
+        android:text="Send" />
+
 </RelativeLayout>

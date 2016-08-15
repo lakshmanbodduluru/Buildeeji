@@ -18,6 +18,7 @@ import admi.buildeeji.R;
 import admi.buildeeji.Util;
 import admi.buildeeji.activity.AboutUsActivity;
 import admi.buildeeji.activity.ContactUs;
+import admi.buildeeji.activity.FeedBackActivity;
 import admi.buildeeji.activity.HelpAndFaq;
 import admi.buildeeji.activity.LiveChat;
 import admi.buildeeji.adapter.SettingsAdapter;
@@ -106,10 +107,8 @@ public class SettingsFragment extends BuildeejiFragment implements View.OnClickL
                 startActivity(contactUs);
                 break;
             case R.id.settings_feed_back:
-                Bundle bundle = new Bundle();
-                bundle.putString(Util.EMAIL_SUBJECT, "FeedBack");
-                Intent feedBack = Util.sendEmail("support@voweisin.com", bundle);
-                startActivity(feedBack);
+                Intent feedbackIntent = new Intent(mActivity, FeedBackActivity.class);
+                startActivity(feedbackIntent);
                 break;
             case R.id.settings_help_faq:
                 Intent helpIntent = new Intent(mActivity, HelpAndFaq.class);
