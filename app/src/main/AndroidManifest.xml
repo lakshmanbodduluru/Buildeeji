@@ -43,8 +43,10 @@
             android:name=".activity.AboutUsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".activity.ContactUs"
-            android:theme="@style/MyMaterialTheme.Action"></activity>
+        <activity
+            android:name=".activity.ContactUs"
+            android:theme="@style/MyMaterialTheme.Action" />
+        <activity android:name=".activity.HelpAndFaq"></activity>
     </application>
 
 </manifest>
