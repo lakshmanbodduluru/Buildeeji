@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/about_buildeeji_logo"
         android:layout_width="match_parent"
@@ -26,7 +27,7 @@
         android:id="@+id/about_us_terms_conditions_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/app_vertion"
+        android:layout_above="@+id/about_us_privacy_policy_card"
         android:layout_margin="5dp">
 
         <LinearLayout
@@ -60,7 +61,7 @@
         android:id="@+id/about_us_privacy_policy_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/about_us_terms_conditions_card"
+        android:layout_above="@+id/about_us_legal_card"
         android:layout_margin="5dp">
 
         <LinearLayout
@@ -94,7 +95,7 @@
         android:id="@+id/about_us_legal_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/about_us_privacy_policy_card"
+        android:layout_above="@+id/about_us_email"
         android:layout_margin="5dp">
 
         <LinearLayout

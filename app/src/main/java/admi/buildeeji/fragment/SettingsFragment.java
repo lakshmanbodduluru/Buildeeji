@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import admi.buildeeji.BuildeejiFragment;
 import admi.buildeeji.R;
 import admi.buildeeji.activity.AboutUsActivity;
+import admi.buildeeji.activity.ContactUs;
 import admi.buildeeji.adapter.SettingsAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.Settings;
@@ -73,6 +74,7 @@ public class SettingsFragment extends BuildeejiFragment implements View.OnClickL
     private void initListener() {
         mShare.setOnClickListener(this);
         mAboutUs.setOnClickListener(this);
+        mContactUs.setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +89,8 @@ public class SettingsFragment extends BuildeejiFragment implements View.OnClickL
                 startActivity(aboutIntent);
                 break;
             case R.id.settings_contact_us:
+                Intent contactUs = new Intent(mActivity, ContactUs.class);
+                startActivity(contactUs);
                 break;
             case R.id.settings_feed_back:
                 break;

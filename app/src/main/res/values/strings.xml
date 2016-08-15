@@ -40,4 +40,22 @@
     <string name="submit">Submit</string>
     <string name="help_faq"><![CDATA[Help & FAQ]]></string>
     <string name="about_email">for any support kindly contact us/ Email: <u>info@buildeeji.com</u></string>
+    <string-array name="contact_us_reason">
+        <item>Select one Reason</item>
+        <item>Participation in BuildExpo </item>
+        <item>Payment verifications</item>
+        <item>Account validations</item>
+        <item>Support</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="contact_us_country_code">
+        <item>Select Country</item>
+        <item>afganistan</item>
+        <item>bangaladesh</item>
+        <item>coriya</item>
+        <item>dubai</item>
+        <item>egipt</item>
+        <item>France</item>
+        <item>Germany</item>
+    </string-array>
 </resources>

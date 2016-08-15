@@ -26,4 +26,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyMaterialTheme.Action" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
 </resources>

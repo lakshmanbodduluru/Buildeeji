@@ -42,7 +42,9 @@
         <activity
             android:name=".activity.AboutUsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.ActionBar"></activity>
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity android:name=".activity.ContactUs"
+            android:theme="@style/MyMaterialTheme.Action"></activity>
     </application>
 
 </manifest>
