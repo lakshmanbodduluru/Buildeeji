@@ -45,8 +45,17 @@
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".activity.ContactUs"
+            android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme.Action" />
-        <activity android:name=".activity.HelpAndFaq"></activity>
+        <activity
+            android:name=".activity.HelpAndFaq"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Action" />
+        <activity
+            android:name=".activity.LiveChat"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Action" />
+        <activity android:name=".activity.FeedBackActivity"></activity>
     </application>
 
 </manifest>

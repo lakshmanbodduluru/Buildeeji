@@ -6,15 +6,14 @@ import android.os.Bundle;
 
 import admi.buildeeji.R;
 
-public class HelpAndFaq extends AppCompatActivity {
+public class LiveChat extends AppCompatActivity {
     ActionBar mActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_help_and_faq);
+        setContentView(R.layout.activity_live_chat);
         mActionBar = getSupportActionBar();
-        mActionBar.setTitle("Help & FAQ");
-        mActionBar.setDisplayShowHomeEnabled(true);
+        mActionBar.setTitle("Live Chat");
     }
 }

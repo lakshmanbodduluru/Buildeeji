@@ -19,6 +19,7 @@ import admi.buildeeji.Util;
 import admi.buildeeji.activity.AboutUsActivity;
 import admi.buildeeji.activity.ContactUs;
 import admi.buildeeji.activity.HelpAndFaq;
+import admi.buildeeji.activity.LiveChat;
 import admi.buildeeji.adapter.SettingsAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.Settings;
@@ -78,12 +79,21 @@ public class SettingsFragment extends BuildeejiFragment implements View.OnClickL
         mAboutUs.setOnClickListener(this);
         mContactUs.setOnClickListener(this);
         mFeedBack.setOnClickListener(this);
+        mLiveChat.setOnClickListener(this);
+        mHelpFAQ.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.settings_share:
+                String shareBody = "Google play store link";
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "APP NAME (Open it in Google Play Store to Download the Application)");
+
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
                 break;
             case R.id.settings_rate_us:
                 break;
@@ -106,6 +116,8 @@ public class SettingsFragment extends BuildeejiFragment implements View.OnClickL
                 startActivity(helpIntent);
                 break;
             case R.id.settings_live_chat:
+                Intent settingsIntent = new Intent(mActivity, LiveChat.class);
+                startActivity(settingsIntent);
                 break;
         }
     }
