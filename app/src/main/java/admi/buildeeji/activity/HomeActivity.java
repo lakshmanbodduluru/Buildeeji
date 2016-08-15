@@ -245,12 +245,7 @@ public class HomeActivity extends BuildeejiActivity
 
     @Override
     public void onClickMail(String toMail) {
-        Intent email = new Intent(Intent.ACTION_VIEW);
-        email.setType("plain/text");
-        email.setData(Uri.parse("lakshman.bodduluru@gmail.com"));
-        email.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
-        email.putExtra(Intent.EXTRA_EMAIL, new String[]{toMail});
-        email.setType("message/rfc822");
+        Intent email = Util.sendEmail("lakshman.bodduluru@gmail.com", null);
         startActivity(email);
     }
 

@@ -15,8 +15,10 @@ import java.util.ArrayList;
 
 import admi.buildeeji.BuildeejiFragment;
 import admi.buildeeji.R;
+import admi.buildeeji.Util;
 import admi.buildeeji.activity.AboutUsActivity;
 import admi.buildeeji.activity.ContactUs;
+import admi.buildeeji.activity.HelpAndFaq;
 import admi.buildeeji.adapter.SettingsAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.Settings;
@@ -75,6 +77,7 @@ public class SettingsFragment extends BuildeejiFragment implements View.OnClickL
         mShare.setOnClickListener(this);
         mAboutUs.setOnClickListener(this);
         mContactUs.setOnClickListener(this);
+        mFeedBack.setOnClickListener(this);
     }
 
     @Override
@@ -93,8 +96,14 @@ public class SettingsFragment extends BuildeejiFragment implements View.OnClickL
                 startActivity(contactUs);
                 break;
             case R.id.settings_feed_back:
+                Bundle bundle = new Bundle();
+                bundle.putString(Util.EMAIL_SUBJECT, "FeedBack");
+                Intent feedBack = Util.sendEmail("support@voweisin.com", bundle);
+                startActivity(feedBack);
                 break;
             case R.id.settings_help_faq:
+                Intent helpIntent = new Intent(mActivity, HelpAndFaq.class);
+                startActivity(helpIntent);
                 break;
             case R.id.settings_live_chat:
                 break;
