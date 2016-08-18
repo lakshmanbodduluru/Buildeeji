@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import admi.buildeeji.R;
+import admi.buildeeji.activity.StringArraysClass;
 import admi.buildeeji.adapter.NotificationsAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.Notifications;
@@ -57,10 +58,10 @@ public class NotificationsFragment extends Fragment {
     }
 
     private void setData() {
-        for (int i = 0; i < companyName.length; i++) {
+        for (int i = 0; i < 15; i++) {
             Notifications notifications = new Notifications();
-            notifications.setCompanyName(companyName[i]);
-            notifications.setContactPerson(BasicBuildExpoFragment.contactPerson[i]);
+            notifications.setCompanyName(StringArraysClass.companyNameNotification[i]);
+            notifications.setContactPerson(StringArraysClass.contactPersonNotification[i]);
             notifications.setDateTime(dateTime[i]);
             notifications.setSummery(BasicBuildExpoFragment.summery[i]);
             notifications.setPastProjects(BasicBuildExpoFragment.featureProjects[i]);

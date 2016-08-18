@@ -38,7 +38,6 @@
             android:layout_margin="20dp"
             android:background="@drawable/shape_round_rect_white"
             android:hint="@string/username_email_mobile"
-            android:textSize="@dimen/commen_text_size_12"
             android:padding="10dp"
             android:textCursorDrawable="@color/black" />
     </android.support.design.widget.TextInputLayout>
@@ -59,7 +58,6 @@
             android:layout_margin="20dp"
             android:background="@drawable/shape_round_rect_white"
             android:hint="Password"
-            android:textSize="@dimen/commen_text_size_12"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textCursorDrawable="@color/black" />

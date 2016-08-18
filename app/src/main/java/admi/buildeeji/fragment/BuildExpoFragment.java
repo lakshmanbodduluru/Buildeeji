@@ -25,6 +25,7 @@ public class BuildExpoFragment extends BuildeejiFragment implements RadioGroup.O
     private GoldBuildExpoFragment mGoldBuildExpoFragment;
     private RadioButton basicBuildExpoRadioBtn;
 
+
     public BuildExpoFragment() {
 
     }

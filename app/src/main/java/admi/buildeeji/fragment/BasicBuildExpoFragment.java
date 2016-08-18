@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import admi.buildeeji.BuildeejiFragment;
 import admi.buildeeji.R;
 import admi.buildeeji.activity.HomeActivity;
+import admi.buildeeji.activity.StringArraysClass;
 import admi.buildeeji.adapter.BasicBuildExpoAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 
@@ -35,8 +36,11 @@ public class BasicBuildExpoFragment extends BuildeejiFragment {
             R.drawable.hot_projects, R.drawable.hot_projects, R.drawable.hot_projects,
             R.drawable.hot_projects, R.drawable.hot_projects, R.drawable.hot_projects,
             R.drawable.hot_projects, R.drawable.hot_projects, R.drawable.hot_projects,
+            R.drawable.hot_projects, R.drawable.hot_projects, R.drawable.hot_projects,
             R.drawable.hot_projects, R.drawable.ic_menu_camera, R.drawable.ic_home_black_24dp};
     public static String[] summery = {
+            "I am trying to send a bundle from one activity to another. When I load the bundle in the recieving activity all the information seems to be null. Here is some code",
+            "I am trying to send a bundle from one activity to another. When I load the bundle in the recieving activity all the information seems to be null. Here is some code",
             "I am trying to send a bundle from one activity to another. When I load the bundle in the recieving activity all the information seems to be null. Here is some code",
             "I am trying to send a bundle from one activity to another. When I load the bundle in the recieving activity all the information seems to be null. Here is some code",
             "I am trying to send a bundle from one activity to another. When I load the bundle in the recieving activity all the information seems to be null. Here is some code",
@@ -126,7 +130,14 @@ public class BasicBuildExpoFragment extends BuildeejiFragment {
                     "When we set the tab an icon and text, you can see the icon is horizontally aligned with tab text. But if you want to place the icon above the tab label, you have to use a custom view to achive it.",
             "Setting a custom view to the tab is very useful when you are not able to achieve desired output by following the methods provided by tab layout. While setting a custom view to tab, make sure that you follow the specs suggested by android for tabs.\n" +
                     "\n" +
+                    "When we set the tab an icon and text, you can see the icon is horizontally aligned with tab text. But if you want to place the icon above the tab label, you have to use a custom view to achive it.",
+            "Setting a custom view to the tab is very useful when you are not able to achieve desired output by following the methods provided by tab layout. While setting a custom view to tab, make sure that you follow the specs suggested by android for tabs.\n" +
+                    "\n" +
+                    "When we set the tab an icon and text, you can see the icon is horizontally aligned with tab text. But if you want to place the icon above the tab label, you have to use a custom view to achive it.",
+            "Setting a custom view to the tab is very useful when you are not able to achieve desired output by following the methods provided by tab layout. While setting a custom view to tab, make sure that you follow the specs suggested by android for tabs.\n" +
+                    "\n" +
                     "When we set the tab an icon and text, you can see the icon is horizontally aligned with tab text. But if you want to place the icon above the tab label, you have to use a custom view to achive it."
+
     };
 
 
@@ -193,15 +204,17 @@ public class BasicBuildExpoFragment extends BuildeejiFragment {
     }
 
     private void setData() {
-        for (int i = 0; i < companyName.length; i++) {
+        for (int i = 0; i < StringArraysClass.companyNameBasic.length; i++) {
             BasicBuildExpo basicBuildExpo = new BasicBuildExpo();
-            basicBuildExpo.setCompanyName(companyName[i]);
-            basicBuildExpo.setContactPerson(contactPerson[i]);
+            basicBuildExpo.setCompanyName(StringArraysClass.companyNameBasic[i]);
+            basicBuildExpo.setContactPerson(StringArraysClass.contactPersonBasic[i]);
             basicBuildExpo.setSummery(summery[i]);
             basicBuildExpo.setImage(images[i]);
             basicBuildExpo.setFeatureProjects(featureProjects[i]);
             basicBuildExpo.setPresentProjects(summery[i]);
-            basicBuildExpo.setPreviousProjects(featureProjects[i]);
+            basicBuildExpo.setPhoneNumber(StringArraysClass.phoneBasic[i]);
+//            basicBuildExpo.setEmail(StringArraysClass.emailBasic[i]);
+//            basicBuildExpo.setPreviousProjects(featureProjects[i]);
             basicBuildExpoArrayList.add(basicBuildExpo);
         }
     }

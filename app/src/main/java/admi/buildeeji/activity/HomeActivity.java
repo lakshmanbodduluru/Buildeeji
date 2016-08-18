@@ -29,6 +29,7 @@ import admi.buildeeji.R;
 import admi.buildeeji.Util;
 import admi.buildeeji.adapter.NavigationAdapter;
 import admi.buildeeji.adapter.ViewPagerAdapter;
+import admi.buildeeji.bin.Home;
 import admi.buildeeji.bin.NavigationDataProvider;
 import admi.buildeeji.fragment.BuildExpoFragment;
 import admi.buildeeji.fragment.HomeFragment;
@@ -120,6 +121,8 @@ public class HomeActivity extends BuildeejiActivity
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         homeViewPager = (ViewPager) findViewById(R.id.home_viewpager);
         setUpViewPager(homeViewPager);
+//        homeViewPager.beginFakeDrag();
+        homeViewPager.canScrollHorizontally(1);
         tabLayout.setupWithViewPager(homeViewPager);
         setTabIcons();
 
@@ -189,9 +192,22 @@ public class HomeActivity extends BuildeejiActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.action_settings:
+                Toast.makeText(HomeActivity.this, "Settings", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_profile:
+                Toast.makeText(HomeActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_logout:
+                Intent logoutIntent = new Intent(HomeActivity.this, LoginActivity.class);
+                HomeActivity.this.finish();
+                startActivity(logoutIntent);
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.commit();
+                break;
         }
 
         return super.onOptionsItemSelected(item);

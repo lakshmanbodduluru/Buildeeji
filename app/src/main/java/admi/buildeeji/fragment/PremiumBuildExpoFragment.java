@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import admi.buildeeji.R;
+import admi.buildeeji.activity.StringArraysClass;
 import admi.buildeeji.adapter.PremiumBuildExpoAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.PremiumBuildExpo;
@@ -57,11 +58,12 @@ public class PremiumBuildExpoFragment extends Fragment {
     }
 
     private void setData() {
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < 15; i++) {
             PremiumBuildExpo premiumBuildExpo = new PremiumBuildExpo();
-            premiumBuildExpo.setCompanyName(array[i]);
+            premiumBuildExpo.setCompanyName(StringArraysClass.companyNamePremium[i]);
             premiumBuildExpo.setImage(BasicBuildExpoFragment.images[i]);
-            premiumBuildExpo.setContactPerson(BasicBuildExpoFragment.contactPerson[i]);
+            premiumBuildExpo.setContactPerson(StringArraysClass.phonePremium[i]);
+            premiumBuildExpo.setEmail(StringArraysClass.emailPremium[i]);
             premiumBuildExpo.setSummery(BasicBuildExpoFragment.summery[i]);
             premiumBuildExpo.setFeatureProjects(BasicBuildExpoFragment.featureProjects[i]);
             premiumBuildExpo.setPresentProjects(BasicBuildExpoFragment.summery[i]);

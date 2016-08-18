@@ -97,10 +97,10 @@ public class BasicBuildExpoAdapter extends RecyclerView.Adapter<BasicBuildExpoAd
                     clickListener.onClick(v, getAdapterPosition(), bundle);
                     break;
                 case R.id.basic_build_expo_phone_icon:
-                    clickListener.onClickPhone("9494896482");
+                    clickListener.onClickPhone(basicBuildExpo.getPhoneNumber());
                     break;
                 case R.id.basic_build_expo_mail_icon:
-                    clickListener.onClickMail("lakshman.bodduluru@gmail.com");
+                    clickListener.onClickMail(basicBuildExpo.getEmail());
                     break;
             }
         }

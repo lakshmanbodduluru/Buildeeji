@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import admi.buildeeji.R;
 import admi.buildeeji.Util;
+import admi.buildeeji.activity.StringArraysClass;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.PremiumBuildExpo;
 import admi.buildeeji.listeners.ClickListener;
@@ -97,10 +98,10 @@ public class PremiumBuildExpoAdapter extends RecyclerView.Adapter<PremiumBuildEx
                     clickListener.onClick(v, getAdapterPosition(), bundle);
                     break;
                 case R.id.premium_build_expo_phone_icon:
-                    clickListener.onClickPhone("9494896482");
+                    clickListener.onClickPhone(premiumBuildExpo.getPhoneNumber());
                     break;
                 case R.id.premium_build_expo_mail_icon:
-                    clickListener.onClickMail("lakshman.bodduluru@gmail.com");
+                    clickListener.onClickMail(premiumBuildExpo.getEmail());
                     break;
             }
         }

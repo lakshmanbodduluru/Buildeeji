@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import admi.buildeeji.R;
+import admi.buildeeji.activity.StringArraysClass;
 import admi.buildeeji.adapter.HotProjectsAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.HotProjects;
@@ -65,10 +66,12 @@ public class HotProjectsFragment extends Fragment {
     }
 
     private void setData() {
-        for (int i = 0; i < companyName.length; i++) {
+        for (int i = 0; i < 15; i++) {
             HotProjects hotProjects = new HotProjects();
-            hotProjects.setCompanyName(companyName[i]);
-            hotProjects.setContactPerson(BasicBuildExpoFragment.contactPerson[i]);
+            hotProjects.setCompanyName(StringArraysClass.companyNameHotProject[i]);
+            hotProjects.setContactPerson(StringArraysClass.contactPersonHotProject[i]);
+            hotProjects.setPhoneNumber(StringArraysClass.phoneHotProject[i]);
+            hotProjects.setEmail(StringArraysClass.emailHotProject[i]);
             hotProjects.setImage(BasicBuildExpoFragment.images[i]);
             hotProjects.setSummery(BasicBuildExpoFragment.summery[i]);
             hotProjects.setFeatureProjects(BasicBuildExpoFragment.featureProjects[i]);

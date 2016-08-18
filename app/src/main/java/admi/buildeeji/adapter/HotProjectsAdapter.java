@@ -96,10 +96,10 @@ public class HotProjectsAdapter extends RecyclerView.Adapter<HotProjectsAdapter.
                     clickListener.onClick(v, getAdapterPosition(), bundle);
                     break;
                 case R.id.hot_projects_phone_icon:
-                    clickListener.onClickPhone("9494896482");
+                    clickListener.onClickPhone(hotProjects.getPhoneNumber());
                     break;
                 case R.id.hot_projects_mail_icon:
-                    clickListener.onClickMail("lakshman.bodduluru@gmail.com");
+                    clickListener.onClickMail(hotProjects.getEmail());
                     break;
             }
         }

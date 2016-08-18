@@ -22,17 +22,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FirstActivity" />
+        <activity android:name=".activity.FirstActivity"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".activity.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.LoginActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Action" />
         <activity
             android:name=".activity.SignUpActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Action" />
         <activity
             android:name=".activity.ForgetActivity"
             android:screenOrientation="portrait" />
@@ -57,6 +61,7 @@
             android:theme="@style/MyMaterialTheme.Action" />
         <activity
             android:name=".activity.FeedBackActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme.Action"></activity>
     </application>
 

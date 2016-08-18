@@ -110,6 +110,7 @@
         android:background="@drawable/shape_round_rect_white"
         android:gravity="start"
         android:hint="Mobile"
+        android:inputType="number"
         android:padding="2dp" />
 
     <Button

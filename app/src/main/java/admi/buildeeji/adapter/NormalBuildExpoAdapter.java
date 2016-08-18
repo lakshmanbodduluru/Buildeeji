@@ -86,6 +86,7 @@ public class NormalBuildExpoAdapter extends RecyclerView.Adapter<NormalBuildExpo
                     break;
                 case R.id.normal_build_expo_card_view:
                     Bundle bundle = new Bundle();
+                    bundle.putString(Util.RESULT_COMPANY_NAME, normalBuildExpo.getCompanyName());
                     bundle.putString(Util.RESULT_SUMMERY, normalBuildExpo.getSummery());
                     bundle.putString(Util.RESULT_FEATURE_PROJECTS, normalBuildExpo.getFeatureProjects());
                     bundle.putString(Util.RESULT_PRESENT_PROJECTS, normalBuildExpo.getPresentProjects());
@@ -93,10 +94,10 @@ public class NormalBuildExpoAdapter extends RecyclerView.Adapter<NormalBuildExpo
                     clickListener.onClick(v, getAdapterPosition(), bundle);
                     break;
                 case R.id.normal_build_expo_phone_icon:
-                    clickListener.onClickPhone("9494896482");
+                    clickListener.onClickPhone(normalBuildExpo.getPhoneNumber());
                     break;
                 case R.id.normal_build_expo_mail_icon:
-                    clickListener.onClickMail("lakshman.bodduluru@gmail.com");
+                    clickListener.onClickMail(normalBuildExpo.getEmail());
                     break;
             }
         }

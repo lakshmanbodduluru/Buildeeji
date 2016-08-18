@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import admi.buildeeji.R;
+import admi.buildeeji.activity.StringArraysClass;
 import admi.buildeeji.adapter.GoldBuildExpoAdapter;
 import admi.buildeeji.bin.BasicBuildExpo;
 import admi.buildeeji.bin.GoldBuildExpo;
@@ -58,10 +59,12 @@ public class GoldBuildExpoFragment extends Fragment {
     }
 
     private void setData() {
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < 15; i++) {
             GoldBuildExpo goldBuildExpo = new GoldBuildExpo();
-            goldBuildExpo.setCompanyName(array[i]);
-            goldBuildExpo.setContactPerson(BasicBuildExpoFragment.contactPerson[i]);
+            goldBuildExpo.setCompanyName(StringArraysClass.companyNameGold[i]);
+            goldBuildExpo.setContactPerson(StringArraysClass.contactPersonGold[i]);
+            goldBuildExpo.setPhoneNumber(StringArraysClass.phoneGold[i]);
+            goldBuildExpo.setEmail(StringArraysClass.emailGold[i]);
             goldBuildExpo.setFeatureProjects(BasicBuildExpoFragment.featureProjects[i]);
             goldBuildExpo.setSummery(BasicBuildExpoFragment.summery[i]);
             goldBuildExpo.setImage(BasicBuildExpoFragment.images[i]);
