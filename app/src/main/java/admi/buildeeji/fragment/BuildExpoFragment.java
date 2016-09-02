@@ -57,14 +57,14 @@ public class BuildExpoFragment extends BuildeejiFragment implements RadioGroup.O
     @Override
     public void onResume() {
         super.onResume();
-        mRadioGroupBtn.check(R.id.build_expo_basic_radio_button);
+//        mRadioGroupBtn.check(R.id.build_expo_basic_radio_button);
         if (basicBuildExpoRadioBtn.isChecked()) {
-            displayDefaultBasicBuildExpoFragment();
+//            displayDefaultBasicBuildExpoFragment();
         }
     }
 
 
-    private void init() {
+   private void init() {
         initViews();
         initListener();
     }

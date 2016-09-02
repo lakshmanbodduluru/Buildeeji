@@ -31,6 +31,7 @@ import admi.buildeeji.adapter.NavigationAdapter;
 import admi.buildeeji.adapter.ViewPagerAdapter;
 import admi.buildeeji.bin.Home;
 import admi.buildeeji.bin.NavigationDataProvider;
+import admi.buildeeji.bin.Settings;
 import admi.buildeeji.fragment.BuildExpoFragment;
 import admi.buildeeji.fragment.HomeFragment;
 import admi.buildeeji.fragment.HotProjectsFragment;
@@ -195,9 +196,17 @@ public class HomeActivity extends BuildeejiActivity
         switch (id) {
             case R.id.action_settings:
                 Toast.makeText(HomeActivity.this, "Settings", Toast.LENGTH_SHORT).show();
+                Intent settingsIntent = new Intent(this, SettingsActivity.class);
+                settingsIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(settingsIntent);
                 break;
             case R.id.action_profile:
-                Toast.makeText(HomeActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+               /* Toast.makeText(HomeActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+                Intent profileIntent = new Intent(this, ProfileActivity.class);
+                profileIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(profileIntent);*/
+                Intent exRecyclerView = new Intent(HomeActivity.this, ExRecycle.class);
+                startActivity(exRecyclerView);
                 break;
             case R.id.action_logout:
                 Intent logoutIntent = new Intent(HomeActivity.this, LoginActivity.class);
@@ -277,6 +286,23 @@ public class HomeActivity extends BuildeejiActivity
         } else {
             Intent login = new Intent(HomeActivity.this, LoginActivity.class);
             startActivity(login);
+        }
+    }
+
+    @Override
+    public void expandableRecycleClick(String name) {
+        switch (name) {
+            case "Home":
+                Intent profile = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(profile);
+                break;
+            case "Forums":
+                Intent settings = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(settings);
+                break;
+            default:
+                break;
+
         }
     }
 

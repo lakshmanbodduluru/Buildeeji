@@ -14,4 +14,5 @@ public interface ClickListener {
     public void onClickMail(String toMail);
 
     public void onClickPhone(String phone);
+    public void expandableRecycleClick(String name);
 }
