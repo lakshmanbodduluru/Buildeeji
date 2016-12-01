@@ -6,7 +6,7 @@
     tools:context="admi.buildeeji.activity.ExRecycle">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/navigation_recycler_view"
+        android:id="@+id/navigation_recycler_view_cancle"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

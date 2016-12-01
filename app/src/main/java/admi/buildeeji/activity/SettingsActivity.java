@@ -2,7 +2,6 @@ package admi.buildeeji.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
@@ -11,10 +10,6 @@ import admi.buildeeji.R;
 import admi.buildeeji.adapter.ViewPagerAdapter;
 import admi.buildeeji.fragment.AccountSettingsFragment;
 import admi.buildeeji.fragment.NotificationsSettingsFragment;
-import admi.buildeeji.fragment.ResultContactFragment;
-import admi.buildeeji.fragment.ResultHomeFragment;
-import admi.buildeeji.fragment.ResultImageFragment;
-import admi.buildeeji.fragment.ResultVideoFragment;
 import admi.buildeeji.fragment.ThemSettingsFragment;
 
 public class SettingsActivity extends BuildeejiActivity {

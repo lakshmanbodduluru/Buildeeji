@@ -2,23 +2,16 @@ package admi.buildeeji.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import admi.buildeeji.BuildeejiActivity;
 import admi.buildeeji.R;
 import admi.buildeeji.adapter.ViewPagerAdapter;
-import admi.buildeeji.fragment.AdvanceFragmentPremium;
-import admi.buildeeji.fragment.BasicPremiumFragment;
+import admi.buildeeji.fragment.PremiumAdvanceFragment;
+import admi.buildeeji.fragment.PremiumBasicFragment;
 import admi.buildeeji.fragment.MonthlyPremiumFragment;
-import admi.buildeeji.fragment.ResultContactFragment;
-import admi.buildeeji.fragment.ResultHomeFragment;
-import admi.buildeeji.fragment.ResultImageFragment;
-import admi.buildeeji.fragment.ResultVideoFragment;
-import admi.buildeeji.fragment.YearlyPremiumFragment;
+import admi.buildeeji.fragment.PremiumYearlyFragment;
 
 public class PremiumPlansActivity extends BuildeejiActivity {
     private Toolbar mToolbar;
@@ -53,11 +46,11 @@ public class PremiumPlansActivity extends BuildeejiActivity {
     }
 
     private void setUpViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), ResultActivity.class.getSimpleName());
-        adapter.addFragment(new BasicPremiumFragment(), "Basic");
-        adapter.addFragment(new AdvanceFragmentPremium(), "Advanced");
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), BuildExpoResultActivity.class.getSimpleName());
+        adapter.addFragment(new PremiumBasicFragment(), "Basic");
+        adapter.addFragment(new PremiumAdvanceFragment(), "Advanced");
         adapter.addFragment(new MonthlyPremiumFragment(), "Monthly");
-        adapter.addFragment(new YearlyPremiumFragment(), "Yearly");
+        adapter.addFragment(new PremiumYearlyFragment(), "Yearly");
         viewPager.setAdapter(adapter);
     }
 }

@@ -9,6 +9,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,21 +20,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ExpandableListView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
 
 import admi.buildeeji.BuildeejiActivity;
 import admi.buildeeji.R;
 import admi.buildeeji.Util;
-import admi.buildeeji.adapter.NavigationAdapter;
+import admi.buildeeji.adapter.ExpandableRecycleAdapter;
 import admi.buildeeji.adapter.ViewPagerAdapter;
 import admi.buildeeji.bin.Home;
 import admi.buildeeji.bin.NavigationDataProvider;
-import admi.buildeeji.bin.Settings;
 import admi.buildeeji.fragment.BuildExpoFragment;
 import admi.buildeeji.fragment.HomeFragment;
 import admi.buildeeji.fragment.HotProjectsFragment;
@@ -42,14 +39,14 @@ import admi.buildeeji.listeners.ClickListener;
 public class HomeActivity extends BuildeejiActivity
         implements NavigationView.OnNavigationItemSelectedListener, ClickListener {
 
-    ExpandableListView expandableListView;
-    LinkedHashMap<String, List<String>> navigationCategory;
-    List<String> navigationList;
-    NavigationAdapter navigationAdapter;
+    RecyclerView mNavigationRecyclerView;
     Toolbar toolbar;
+    private boolean mOptionsMenu;
+    ExpandableRecycleAdapter mExpandableRecycleAdapter;
     public boolean mFirstBackPressed;
     TabLayout tabLayout;
     String mActivityName;
+    NavigationDataProvider mNavigationDataProvider;
     ViewPager homeViewPager;
     private int[] tabIcons = {
             R.drawable.ic_home_white_24dp,
@@ -60,8 +57,8 @@ public class HomeActivity extends BuildeejiActivity
     };
     private int[] tabIconsBlack = {
             R.drawable.ic_home_black_24dp,
-            R.drawable.build_expo,
-            R.drawable.hot_projects,
+            R.drawable.build_expo_black,
+            R.drawable.hot_projects_black,
             R.drawable.ic_notifications_none_black_24dp,
             R.drawable.ic_settings_black_24dp
     };
@@ -75,22 +72,94 @@ public class HomeActivity extends BuildeejiActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         init();
     }
 
     private void init() {
         initViews();
         initListener();
+        setNavigationRecycleAdapter();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        return super.onPrepareOptionsMenu(menu);
+
+    }
+
+    private void setNavigationRecycleAdapter() {
+        mExpandableRecycleAdapter = new ExpandableRecycleAdapter(HomeActivity.this, mNavigationDataProvider.getParentList());
+        mNavigationRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        mNavigationRecyclerView.setItemAnimator(new DefaultItemAnimator());
+//        mExpandableRecycleAdapter.notifyParentItemChanged(1);
+        mExpandableRecycleAdapter.notifyDataSetChanged();
+        mNavigationRecyclerView.swapAdapter(mExpandableRecycleAdapter, true);
     }
 
     private void initListener() {
+        homeViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (position == 0) {
+                    tabLayout.getTabAt(0).setIcon(tabIconsBlack[0]);
+                    tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+                    tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+                    tabLayout.getTabAt(3).setIcon(tabIcons[3]);
+                    tabLayout.getTabAt(4).setIcon(tabIcons[4]);
+                } else if (position == 1) {
+                    tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+                    tabLayout.getTabAt(1).setIcon(tabIconsBlack[1]);
+                    tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+                    tabLayout.getTabAt(3).setIcon(tabIcons[3]);
+                    tabLayout.getTabAt(4).setIcon(tabIcons[4]);
 
+                } else if (position == 2) {
+                    tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+                    tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+                    tabLayout.getTabAt(2).setIcon(tabIconsBlack[2]);
+                    tabLayout.getTabAt(3).setIcon(tabIcons[3]);
+                    tabLayout.getTabAt(4).setIcon(tabIcons[4]);
+
+                } else if (position == 3) {
+                    tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+                    tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+                    tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+                    tabLayout.getTabAt(3).setIcon(tabIconsBlack[3]);
+                    tabLayout.getTabAt(4).setIcon(tabIcons[4]);
+                } else if (position == 4) {
+                    tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+                    tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+                    tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+                    tabLayout.getTabAt(3).setIcon(tabIcons[3]);
+                    tabLayout.getTabAt(4).setIcon(tabIconsBlack[4]);
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void initViews() {
         mFirstBackPressed = false;
         mActivityName = getIntent().getStringExtra(Util.LOGIN);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mNavigationDataProvider = new NavigationDataProvider();
+        mNavigationRecyclerView = (RecyclerView) findViewById(R.id.navigation_recycler_view);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -111,12 +180,7 @@ public class HomeActivity extends BuildeejiActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Expandable ListView
-        expandableListView = (ExpandableListView) findViewById(R.id.expandable_list_view);
-        navigationCategory = NavigationDataProvider.getNavigationData();
-        navigationList = new ArrayList<>(navigationCategory.keySet());
-        navigationAdapter = new NavigationAdapter(this, navigationCategory, navigationList);
-        expandableListView.setAdapter(navigationAdapter);
+        // NAVIGATION Expandable RecyclerView
 
         // Swiping Tabs
         tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -125,7 +189,9 @@ public class HomeActivity extends BuildeejiActivity
 //        homeViewPager.beginFakeDrag();
         homeViewPager.canScrollHorizontally(1);
         tabLayout.setupWithViewPager(homeViewPager);
-        setTabIcons();
+//        setTabIcons();
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_clear);
 
     }
 
@@ -205,17 +271,20 @@ public class HomeActivity extends BuildeejiActivity
                 Intent profileIntent = new Intent(this, ProfileActivity.class);
                 profileIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(profileIntent);*/
-                Intent exRecyclerView = new Intent(HomeActivity.this, ExRecycle.class);
+                Intent exRecyclerView = new Intent(HomeActivity.this, ProfileActivity.class);
                 startActivity(exRecyclerView);
                 break;
             case R.id.action_logout:
-                Intent logoutIntent = new Intent(HomeActivity.this, LoginActivity.class);
+                /*Intent logoutIntent = new Intent(HomeActivity.this, LoginActivity.class);
                 HomeActivity.this.finish();
                 startActivity(logoutIntent);
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
-                editor.commit();
+                editor.commit();*/
+
+                Intent intent = new Intent(HomeActivity.this, FilterSortByActivity.class);
+                startActivity(intent);
                 break;
         }
 
@@ -258,8 +327,14 @@ public class HomeActivity extends BuildeejiActivity
 
     @Override
     public void onClick(View view, int position, Bundle bundle) {
-        Intent intent = new Intent(this, ResultActivity.class);
+        Intent intent = new Intent(this, BuildExpoResultActivity.class);
         intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onClickHotProject() {
+        Intent intent = new Intent(this, HotProjectResultPage.class);
         startActivity(intent);
     }
 
@@ -299,6 +374,10 @@ public class HomeActivity extends BuildeejiActivity
             case "Forums":
                 Intent settings = new Intent(HomeActivity.this, SettingsActivity.class);
                 startActivity(settings);
+                break;
+            case "Recent Activity":
+                Intent recentActivity = new Intent(HomeActivity.this, RecentActivity.class);
+                startActivity(recentActivity);
                 break;
             default:
                 break;

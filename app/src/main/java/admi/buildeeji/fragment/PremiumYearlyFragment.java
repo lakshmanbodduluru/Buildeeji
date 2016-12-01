@@ -10,10 +10,10 @@ import admi.buildeeji.R;
 /**
  * Created by Admin on 8/29/2016.
  */
-public class BasicPremiumFragment extends BuildExpoFragment {
+public class PremiumYearlyFragment extends BuildExpoFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_basic_premium_plans, container, false);
+        View view = inflater.inflate(R.layout.fragment_yearly_premium_plans, container, false);
         return view;
     }
 }

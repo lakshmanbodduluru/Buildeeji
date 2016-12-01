@@ -23,7 +23,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/toll_text"
         android:layout_marginTop="10dp"
-        android:background="@drawable/layout_bg_black"
+        android:background="@drawable/layout_bg_black_curved"
         android:gravity="center"
         android:orientation="horizontal">
 

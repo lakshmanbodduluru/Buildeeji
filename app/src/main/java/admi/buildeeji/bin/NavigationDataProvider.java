@@ -1,6 +1,7 @@
 package admi.buildeeji.bin;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -9,72 +10,60 @@ import java.util.List;
  * Created by Admin on 7/17/2016.
  */
 public class NavigationDataProvider {
+    public List<Parent> mParentList;
+    public static final String FORUMS = "Forums";
+    public static final String INTERVIEWS = "Interviews";
+    public static final String ARTICLES = "Articles";
+    public static final String REVIEWS = "Reviews";
+    public static final String FEEDBACK = "Feedback";
+    public static final String NEW_PROPERTY = "New Property";
+    public static final String RESALE_PROPERTY = "Resale Property";
+    public static final String RENT_LEASE_PG = "Rent/Lease/Pg";
+    public static final String CONSTRUCTION_PROFESSIONALS = "Construction Professionals";
+    public static final String CONSTRUCTION_SERVICES = "Construction Services";
+    public static final String CONSTRUCTION_MATERIALS = "Construction Materials";
+    public static final String HOME = "Home";
+    public static final String REAL_ESTATE = "Real Estate";
+    public static final String PROPERTY = "Property";
+    public static final String BUILD_EXPO = "Build Expo";
+    public static final String POST_RESIDENTIAL = "Post Residential";
+    public static final String MANAGE_EDIT_LISTING = "Manage Edit Listing";
+    public static final String VIEW_RESPONSES = "View Responses";
+    public static final String SHORT_LIST = "Short List";
+    public static final String RECENT_ACTIVITY = "Recent Activity";
 
-    public static LinkedHashMap<String, List<String>> getNavigationData() {
 
-        List<String> navigationDataHedder = new ArrayList<String>();
-        LinkedHashMap<String, List<String>> navigationDataChild = new LinkedHashMap<String, List<String>>();
+    // RealEstate
+    Child forums = new Child("Forums");
+    Child interviews = new Child("Interviews");
+    Child articles = new Child("Articles");
+    Child reviews = new Child("Reviews");
+    Child feedback = new Child("Feedback");
 
-        //Adding Parent Data
-        navigationDataHedder.add("HOME");
-        navigationDataHedder.add("REAL ESTATE");
-        navigationDataHedder.add("PROPERTY");
-        navigationDataHedder.add("CONSTRUCTION MATERIALS");
-        navigationDataHedder.add("BUILD EXPO");
-        navigationDataHedder.add("POST RESIDENTIAL");
-        navigationDataHedder.add("POST COMMERCIAL");
-        navigationDataHedder.add("MANAGE EDIT LISTING");
-        navigationDataHedder.add("VIEW RESPONSES");
-        navigationDataHedder.add("SHORT LIST");
-        navigationDataHedder.add("RECENT ACTIVITY");
+    //Property
+    Child newProperty = new Child("New Property");
+    Child resaleProperty = new Child("Resale Property");
+    Child rentLeasePg = new Child("Rent/Lease/Pg");
 
-        //Adding Child data
+    //Construction Materials
+    Child constructionProfessionals = new Child("Construction Professionals");
+    Child constructionServices = new Child("Construction Services");
+    Child constructionMaterial = new Child("Construction Materials");
 
-        List<String> home = new ArrayList<String>();
+    Parent home = new Parent("Home", null);
+    Parent realEstate = new Parent("Real Estate", Arrays.asList(forums, interviews, articles, reviews, feedback));
+    Parent property = new Parent("Property", Arrays.asList(newProperty, resaleProperty, rentLeasePg));
+    Parent constructionMaterials = new Parent("Construction Materials", Arrays.asList(constructionProfessionals, constructionServices, constructionMaterial));
+    Parent buildExpo = new Parent("Build Expo", null);
+    Parent postResidential = new Parent("Post Residential", null);
+    Parent postCommercial = new Parent("Manage Edit Listing", null);
+    Parent viewResponses = new Parent("View Responses", null);
+    Parent shortList = new Parent("Short List", null);
+    Parent recentActivity = new Parent("Recent Activity", null);
 
-        List<String> realEstate = new ArrayList<String>();
-        realEstate.add("FORUMS");
-        realEstate.add("INTERVIEWS");
-        realEstate.add("ARTICLES");
-        realEstate.add("REVIEWS");
-        realEstate.add("FEEDBACK");
-
-        List<String> property = new ArrayList<String>();
-        property.add("NEW PROPERTY");
-        property.add("RESALE PROPERTY");
-        property.add("RENT/LEASE/PG");
-
-        List<String> constructionMaterials = new ArrayList<String>();
-        constructionMaterials.add("CONSTRUCTION PROFESSIONALS");
-        constructionMaterials.add("CONSTRUCTION SERVICES");
-        constructionMaterials.add("CONSTRUCTION MATERIALS");
-
-        List<String> buildExpo = new ArrayList<String>();
-
-        List<String> postResidential = new ArrayList<String>();
-
-        List<String> postCommercial = new ArrayList<String>();
-
-        List<String> manageEditListing = new ArrayList<String>();
-
-        List<String> viewResponses = new ArrayList<String>();
-
-        List<String> shortLists = new ArrayList<String>();
-
-        List<String> recentActivity = new ArrayList<String>();
-
-        navigationDataChild.put(navigationDataHedder.get(0), home);
-        navigationDataChild.put(navigationDataHedder.get(1), realEstate);
-        navigationDataChild.put(navigationDataHedder.get(2), property);
-        navigationDataChild.put(navigationDataHedder.get(3), constructionMaterials);
-        navigationDataChild.put(navigationDataHedder.get(4), buildExpo);
-        navigationDataChild.put(navigationDataHedder.get(5), postResidential);
-        navigationDataChild.put(navigationDataHedder.get(6), postCommercial);
-        navigationDataChild.put(navigationDataHedder.get(7), manageEditListing);
-        navigationDataChild.put(navigationDataHedder.get(8), viewResponses);
-        navigationDataChild.put(navigationDataHedder.get(9), shortLists);
-        navigationDataChild.put(navigationDataHedder.get(10), recentActivity);
-
-        return navigationDataChild;
+    public List<Parent> getParentList() {
+        mParentList = Arrays.asList(home, realEstate, property, constructionMaterials, buildExpo, postResidential, postCommercial, viewResponses, shortList, recentActivity);
+        return mParentList;
     }
+
 }

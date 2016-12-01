@@ -28,7 +28,7 @@
         <activity
             android:name=".activity.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.Primary" />
         <activity
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait"
@@ -41,7 +41,7 @@
             android:name=".activity.ForgetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ResultActivity"
+            android:name=".activity.BuildExpoResultActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.AboutUsActivity"
@@ -68,7 +68,10 @@
             android:theme="@style/AppTheme.ActionBar" />
         <activity android:name=".activity.SettingsActivity" />
         <activity android:name=".activity.PremiumPlansActivity" />
-        <activity android:name=".activity.ExRecycle"></activity>
+        <activity android:name=".activity.ExRecycle" />
+        <activity android:name=".activity.RecentActivity" />
+        <activity android:name=".activity.HotProjectResultPage" />
+        <activity android:name=".activity.FilterSortByActivity"></activity>
     </application>
 
 </manifest>

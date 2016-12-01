@@ -84,6 +84,7 @@ public class HotProjectsFragment extends Fragment {
     public void setAdapterForRecyclerView() {
         HotProjectsAdapter hotProjectsAdapter = new HotProjectsAdapter(getActivity(), hotProjectsArrayList);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity());
+//        RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         hotProjectsRecyclerView.setLayoutManager(manager);
         hotProjectsRecyclerView.setItemAnimator(new DefaultItemAnimator());
         hotProjectsRecyclerView.swapAdapter(hotProjectsAdapter, true);

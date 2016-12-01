@@ -12,7 +12,7 @@ import admi.buildeeji.R;
 /**
  * Created by Admin on 8/5/2016.
  */
-public class ResultContactFragment extends BuildeejiFragment {
+public class BuildExpoResultContactFragment extends BuildeejiFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -40,6 +40,24 @@
     <string name="submit">Submit</string>
     <string name="help_faq"><![CDATA[Help & FAQ]]></string>
     <string name="about_email">for any support kindly contact us/ Email: <u>info@buildeeji.com</u></string>
+    <string name="builder_description">Appium is an open source project for cross platform test automation. It can supports tests in any framework and in any language that can create an HTTP request.  It can be used for both Android and iOS , By using Appium we can test Apps on real devices or emulators. It is open source tool for automating native, mobile web, and hybrid applications on iOS and Android platforms</string>
+    <string name="builder_info_correct_yes_or_no">Has Builder provide correct information or not ?</string>
+
+
+    <!--No ( Has builder provide correct information on the Listing ) -->
+    <string name="Report_the_problem_with_Listing">Report the problem with Listing</string>
+    <string name="Property_already_sold_sold_or_rented_out">Property already sold or rented out</string>
+    <string name="incorrect_price_or_area">Incorrect Price/Area</string>
+    <string name="incorrect_location_information">Incorrect Location Information</string>
+    <string name="incorrect_contact_information">Incorrect Contact Information</string>
+    <string name="for_sale_but_listed_under_rent_vice_versa">For Sale but listed under rent/Vice Versa</string>
+    <string name="property_shown_here_does_not_exist">Property shown here does not exist</string>
+    <string name="fake_incorrect_images">Face/Incorrect Images</string>
+    <string name="others">Others</string>
+    <string name="fill_details_to_download">To download brochure please fill in your details</string>
+    <string name="agree_terms_conditions"><![CDATA[Agree T&C]]></string>
+
+
     <string-array name="contact_us_reason">
         <item>Select one Reason</item>
         <item>Participation in BuildExpo </item>

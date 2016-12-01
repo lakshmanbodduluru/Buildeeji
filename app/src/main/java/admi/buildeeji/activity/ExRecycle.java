@@ -21,26 +21,7 @@ import admi.buildeeji.bin.Parent;
 import admi.buildeeji.listeners.ClickListener;
 
 public class ExRecycle extends BuildeejiActivity implements ClickListener {
-    public static final String FORUMS = "Forums";
-    public static final String INTERVIEWS = "Interviews";
-    public static final String ARTICLES = "Articles";
-    public static final String REVIEWS = "Reviews";
-    public static final String FEEDBACK = "Feedback";
-    public static final String NEW_PROPERTY = "New Property";
-    public static final String RESALE_PROPERTY = "Resale Property";
-    public static final String RENT_LEASE_PG = "Rent/Lease/Pg";
-    public static final String CONSTRUCTION_PROFESSIONALS = "Construction Professionals";
-    public static final String CONSTRUCTION_SERVICES = "Construction Services";
-    public static final String CONSTRUCTION_MATERIALS = "Construction Materials";
-    public static final String HOME = "Home";
-    public static final String REAL_ESTATE = "Real Estate";
-    public static final String PROPERTY = "Property";
-    public static final String BUILD_EXPO = "Build Expo";
-    public static final String POST_RESIDENTIAL = "Post Residential";
-    public static final String MANAGE_EDIT_LISTING = "Manage Edit Listing";
-    public static final String VIEW_RESPONSES = "View Responses";
-    public static final String SHORT_LIST="Short List";
-    public static final String RECENT_ACTIVITY="Recent Activity";
+
 
     RecyclerView mRecyclerView;
     List<Parent> mParentList;
@@ -99,6 +80,11 @@ public class ExRecycle extends BuildeejiActivity implements ClickListener {
 
     @Override
     public void onClick(View view, int position, Bundle bundle) {
+
+    }
+
+    @Override
+    public void onClickHotProject() {
 
     }
 

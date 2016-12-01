@@ -86,14 +86,15 @@ public class HotProjectsAdapter extends RecyclerView.Adapter<HotProjectsAdapter.
                     showImageInDialog(hotProjects);
                     break;
                 case R.id.hot_projects_card_view:
-                    Bundle bundle = new Bundle();
+                    /*Bundle bundle = new Bundle();
                     bundle.putString(Util.RESULT_COMPANY_NAME, hotProjects.getCompanyName());
                     bundle.putString(Util.RESULT_CONTACT_PERSON, hotProjects.getContactPerson());
                     bundle.putString(Util.RESULT_SUMMERY, hotProjects.getSummery());
                     bundle.putString(Util.RESULT_FEATURE_PROJECTS, hotProjects.getFeatureProjects());
                     bundle.putString(Util.RESULT_PRESENT_PROJECTS, hotProjects.getPresentProjects());
                     bundle.putString(Util.RESULT_PAST_PROJECTS, hotProjects.getPreviousProjects());
-                    clickListener.onClick(v, getAdapterPosition(), bundle);
+                    clickListener.onClick(v, getAdapterPosition(), bundle);*/
+                    clickListener.onClickHotProject();
                     break;
                 case R.id.hot_projects_phone_icon:
                     clickListener.onClickPhone(hotProjects.getPhoneNumber());

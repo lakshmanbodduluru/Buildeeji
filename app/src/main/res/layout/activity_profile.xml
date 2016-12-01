@@ -9,4 +9,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="admi.buildeeji.activity.ProfileActivity">
 
+    <TextView
+        android:id="@+id/profile_view_account_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:padding="2dp"
+        android:text="Viewed Account on this page first half"/>
+    <TextView
+        android:id="@+id/profile_add_account_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:text="Add Account"
+        android:padding="2dp"
+        android:layout_below="@+id/profile_view_account_tv"/>
+    <TextView
+        android:id="@+id/profile_change_account_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:padding="2dp"
+        android:text="Change Account"
+        android:layout_below="@+id/profile_add_account_tv"/>
+    <TextView
+        android:id="@+id/profile_sign_out_account_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:padding="2dp"
+        android:text="Signout Account"
+        android:layout_below="@+id/profile_change_account_tv"/>
+    <TextView
+        android:id="@+id/profile_delete_account_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:padding="2dp"
+        android:text="Delete Account"
+        android:layout_below="@+id/profile_sign_out_account_tv"/>
+
 </RelativeLayout>

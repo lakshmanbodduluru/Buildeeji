@@ -28,15 +28,12 @@
             <include
                 android:id="@+id/navgation_head"
                 layout="@layout/nav_header_home" />
-
-            <ExpandableListView
-                android:id="@+id/expandable_list_view"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/navigation_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:divider="#000000"
-                android:dividerHeight="0.5dp">
+                android:layout_height="match_parent">
 
-            </ExpandableListView>
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
     </android.support.design.widget.NavigationView>
 

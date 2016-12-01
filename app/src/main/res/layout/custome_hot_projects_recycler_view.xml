@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -7,7 +7,7 @@
     <android.support.v7.widget.CardView
         android:id="@+id/hot_projects_card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_margin="4dp"
         android:layout_marginBottom="5dp"
         app:cardCornerRadius="2dp"
@@ -16,29 +16,27 @@
         <RelativeLayout
             android:id="@+id/normal_build_relative"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/hot_projects_company_img"
                 android:layout_width="130dp"
                 android:layout_height="150dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="12dp"
-                android:layout_toEndOf="@+id/hot_projects_company_img"
-                android:orientation="vertical">
+
 
                 <TextView
                     android:id="@+id/hot_projects_company_name_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/hot_projects_company_img"
                     android:padding="10dp"
                     android:text="lakshman"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/hot_projects_contact_person_tv"
@@ -46,13 +44,20 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="lakshman"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:layout_below="@+id/hot_projects_company_name_tv"
+                    android:layout_toEndOf="@+id/hot_projects_company_img"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_toEndOf="@+id/hot_projects_company_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    >
 
                     <android.support.v7.widget.CardView
                         android:layout_width="38dp"
@@ -66,8 +71,8 @@
                             android:id="@+id/hot_projects_mail_icon"
                             android:layout_width="38dp"
                             android:layout_height="38dp"
-                            android:backgroundTint="@color/google_icons_color"
-                            android:src="@drawable/ic_mail_outline_black_24dp" />
+                            android:tint="@color/google_icons_color"
+                            android:src="@drawable/ic_mail_outline" />
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -82,15 +87,14 @@
                             android:id="@+id/hot_projects_phone_icon"
                             android:layout_width="38dp"
                             android:layout_height="38dp"
-                            android:backgroundTint="@color/google_icons_color"
+                            android:tint="@color/google_icons_color"
                             android:src="@drawable/ic_phone_black_24dp" />
                     </android.support.v7.widget.CardView>
 
                 </LinearLayout>
-            </LinearLayout>
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
 
-</LinearLayout>
+</RelativeLayout>

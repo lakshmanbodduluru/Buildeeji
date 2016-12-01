@@ -8,7 +8,8 @@
     <color name="black">#000000</color>
     <color name="light_blue">#42A5F5</color>
     <item name="background_color" type="color">#2196f3</item>
-    <color name="google_icons_color">#E0E0E0</color>
+    <color name="google_icons_color">#424242</color>
+    <color name="gray300">#E0E0E0</color>
 
 
     <!--Dots Inactive color-->

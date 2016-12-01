@@ -10,7 +10,7 @@ import admi.buildeeji.R;
 /**
  * Created by Admin on 8/29/2016.
  */
-public class AdvanceFragmentPremium extends BuildExpoFragment {
+public class PremiumAdvanceFragment extends BuildExpoFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_advance_premium_plans, container, false);

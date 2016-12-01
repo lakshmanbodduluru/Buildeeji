@@ -13,7 +13,7 @@ import admi.buildeeji.Util;
 /**
  * Created by Admin on 8/5/2016.
  */
-public class ResultHomeFragment extends BuildeejiFragment {
+public class BuildExpoResultHomeFragment extends BuildeejiFragment {
     Bundle bundle;
     TextView mCompanyName;
     TextView summery;
@@ -21,7 +21,7 @@ public class ResultHomeFragment extends BuildeejiFragment {
     TextView presentProjects;
     TextView pastProjects;
 
-    public ResultHomeFragment(Bundle bundle) {
+    public BuildExpoResultHomeFragment(Bundle bundle) {
         this.bundle = bundle;
     }
 

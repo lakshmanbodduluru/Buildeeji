@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import admi.buildeeji.BuildeejiFragment;
 import admi.buildeeji.R;
 import admi.buildeeji.adapter.HomeAdapter;
 import admi.buildeeji.bin.Home;
@@ -18,7 +19,7 @@ import admi.buildeeji.bin.Home;
 /**
  * Created by Admin on 7/18/2016.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BuildeejiFragment {
 
     RecyclerView homeRecyclerView;
     ArrayList<Home> homeArrayList;

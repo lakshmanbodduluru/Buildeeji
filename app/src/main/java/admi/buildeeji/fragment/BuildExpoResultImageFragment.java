@@ -12,11 +12,16 @@ import admi.buildeeji.R;
 /**
  * Created by Admin on 8/5/2016.
  */
-public class ResultVideoFragment extends BuildeejiFragment {
+public class BuildExpoResultImageFragment extends BuildeejiFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_result_video, container, false);
+        View view =inflater.inflate(R.layout.fragment_result_image,container,false);
         return view;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
